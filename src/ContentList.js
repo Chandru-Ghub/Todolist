@@ -18,7 +18,7 @@ const ContentList = ({a,del,edit}) => {
         </ul>
         <div className="check">
             <button onClick={()=>edit(a.name)} className="edit">Edit</button>
-            <button onClick={()=>del(a.id)} className="delete">Delete</button>
+            <button onClick={()=>del(a.name)} className="delete">Delete</button>
         </div>
         {/* <p>hello{ss}</p> */}
     </div>

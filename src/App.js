@@ -9,11 +9,11 @@ function App() {
   const [task, setTask] = useState('');
 
 
-const[value,setValue] = useState()
+
 const[text,setText] = useState(true)
 const[indata,setIndata] = useState(0)
-function del(id){
-    let rem = task.filter((a)=>(a.id!==id))
+function del(name){
+    let rem = task.filter((a)=>(a.name!==name))
     setTask(rem);
     
 }
@@ -22,7 +22,6 @@ function edit(id){
     setItems(editData.name)
     setItems2(editData.description)
     setText(false)
-    console.log(id)
     setIndata(id)
 }
 const [newItems,setItems]=useState('');
@@ -32,12 +31,10 @@ const handleSubmit=(e)=>{
   
     if(indata){
       let res = task.find((a)=>a.name==indata)
-      console.log(res)
       let update = task.map((a)=>a.name==res.name?
       ({name:newItems,description:newItems2})
       :({name:a.name,description:a.description})
       )
-      console.log(update)
       setTask(update)
       setItems('')
       setItems2('')
