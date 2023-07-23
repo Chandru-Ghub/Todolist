@@ -1,6 +1,6 @@
 import React from 'react'
 import ContentData from './ContentData'
-const Content = ({task,del}) => {
+const Content = ({task,del,edit}) => {
   
 return (
 <main>
@@ -9,6 +9,7 @@ return (
     <ContentData
     task = {task}
     del = {del}
+    edit={edit}
    
     />
     ):(<p className='empty'> your list is empty</p>)
